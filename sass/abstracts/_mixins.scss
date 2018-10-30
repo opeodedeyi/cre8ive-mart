@@ -1,0 +1,7 @@
+@mixin header-flex-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  align-items: center;
+}
