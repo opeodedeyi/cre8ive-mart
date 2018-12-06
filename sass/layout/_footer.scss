@@ -1,3 +1,51 @@
 .footer {
-  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+
+  & a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-grey-dark-4);
+
+    &:hover{
+      background-color: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: .5rem 1rem;
+    }
+  }
+
+  &-content__one{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+
+    & a {
+      @include respond(phone) {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-content__two {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    & p {
+      margin: 0 2rem;
+    }
+  }
+
+  &-bottom {
+
+    & p {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+  }
 }

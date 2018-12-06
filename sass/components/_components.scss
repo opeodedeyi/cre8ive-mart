@@ -1,14 +1,87 @@
 /////////////////////////////////////////////
-// website-name
+// LOGO
 
-.website-name{
-  text-decoration: none;
-  margin: 0 2rem;
-  font-size: 3rem;
-  font-weight: 900;
+
+
+/////////////////////////////////////////////
+// SEARCH
+.header-main__left-search {
+  
+  &-icon{
+    height: 2.25rem;
+    width: 2.25rem;
+    color: var(--color-grey-dark-4);
+
+    @include pointer-cursor__on-hover;
+  }
 }
 
-.search-icon {
-  height: 2.25rem;
-  width: 2.25rem;
+/////////////////////////////////////////////
+// LEFT HEADER
+.header-main__left-menu {
+  &-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-grey-dark-4);
+
+    // margin-top: 6px;
+
+    @include pointer-cursor__on-hover;
+  }
 }
+
+/////////////////////////////////////////////
+// SEARCH HEADER
+.header-search {
+  &-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-grey-dark-4);
+
+    // margin-top: 6px;
+
+    @include pointer-cursor__on-hover;
+  }
+}
+
+/////////////////////////////////////////////
+// IMG
+.user{  
+  &-photo {
+    object-fit:cover;
+    object-position:center center;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
+}
+
+/////////////////////////////////////////////
+// NAVBAR
+.navbar{
+  &-header {
+    padding: 0 2rem;
+  
+    &__close {
+      &-icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-items-list-right-icon {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    margin-left: 2.4rem;
+  }
+
+  &-items-list-left-icon {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    margin-right: 2.4rem;
+  }
+}
+  

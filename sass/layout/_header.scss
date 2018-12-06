@@ -1,7 +1,11 @@
 .header {
-  height: 6rem;
+  height: 6.5rem;
   background-color: #fff;
   border-bottom: 1px var(--color-grey-light-2) solid;
+  padding: 2rem;
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
 
   &-main {
     height: 100%;
@@ -11,27 +15,119 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    margin: 0 2em;
   }
 
-  &-main-left {
-    // to be replaced with mixins
+  &-main__left {
+    @include dropdown-left;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     flex-grow: 1;
     align-items: center;
-    // to be replaced with mixins
+    @include respond(tab-port) {
+      justify-content: space-between;
+    }
+
+    &-dropdown,
+    &-initials {
+      @include respond(tab-port) {
+       display: none;
+      }
+    }
+
+    &-menu_name {
+      display: none;
+
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+    }
+
+    &-initials,
+    &-categories {
+      @include header-margin-right;
+    }
+
+    &-menu {
+      margin-right: 1.5rem;
+    }
+
+    &>ul>li{
+      padding: .6rem 0;
+
+      & ul {
+        box-shadow: 0 1px 1px 1px var(--color-grey-light-2);
+      }
+    }
+
+    &-search {
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
   }
 
-  &-main-right{
-    // to be replaced with mixins
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    align-items: center;
+  &-main__right{
+    @include headerflex;
+    @include dropdown-right;
     justify-content: flex-end;
-    // to be replaced with mixins
+
+    &>ul>li {
+      padding: .6rem 0;
+
+      & ul {
+        box-shadow: 0 1px 1px 1px var(--color-grey-light-2);
+      }
+    }
+
+    &-bac,
+    &-login,
+    &-signup,
+    &-photo {
+      @include header-margin-left;
+
+      &:hover {
+        color: var(--color-primary-dark);
+        cursor: pointer;
+      }
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &-search {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 1em;
+
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+    & input {
+      color: #868686;
+      padding-right: 30px;
+    }
+
+    &-box {
+      max-width: 100%;
+      flex-grow: 1;
+      min-width: 200px;
+      background: #fff;
+      font-size: 15px;
+      outline: none;
+      border: none;
+      padding: 7px;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
   }
 }

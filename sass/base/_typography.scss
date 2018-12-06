@@ -1,0 +1,86 @@
+.header-main {
+  &__left {
+    & > a {
+      text-decoration: none;
+      color: var(--color-grey-dark-4);
+      @include header-normal-fontsize;
+    }
+
+    &-search>svg{
+      color: var(--color-grey-dark-4);
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+
+    &-initials > a,
+    &-menu_name > a {
+      text-decoration: none;
+      color: var(--color-primary-dark);
+
+      & > h4 {
+        margin-bottom: 6px;
+      }
+
+      & > h5 {
+        margin-bottom: 6px;
+      }
+    }
+
+    &-menu_name > a {
+      font-size: 2rem;
+    }
+
+    &-categories {
+      cursor: pointer;
+      font-size: 1.4rem !important;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+
+  &__right {
+    & > a {
+      text-decoration: none;
+      color: var(--color-grey-dark-4);
+      @include header-normal-fontsize;
+    }
+
+    &-bac,
+    &-login,
+    &-signup {
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+}
+
+.company-name{
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.features-text {
+  &-header {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    @include respond(phone) {
+      font-size: 2.1rem;
+      padding-top: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &-description {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}

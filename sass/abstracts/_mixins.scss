@@ -1,7 +1,209 @@
-@mixin header-flex-nowrap {
+@mixin headerflex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   flex-grow: 1;
   align-items: center;
 }
+
+@mixin pointer-cursor__on-hover {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin header-normal-fontsize {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@mixin header-margin-right {
+  margin-right: var(--margin-right-1);
+}
+
+@mixin header-margin-left {
+  margin-left: var(--margin-left-1);
+}
+
+
+///////////////////////////
+///////////        section
+@mixin sect-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 250px;
+
+  @include respond(phone) {
+    flex-direction: column;
+    min-height: 370px;
+  }
+}
+
+@mixin sect-features-image {
+  height: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-grow: 1;
+}
+
+@mixin sect-features-content {
+  width: 35%;
+  min-width: 300px;
+  padding: 0 2rem 0 2rem;
+  @include respond(phone) {
+    width: 90%;
+    min-width: 280px;
+    padding: 0;
+  }
+}
+
+@mixin sect-margin-top {
+  margin-top: 10rem;
+
+  @include respond(phone) {
+    margin-top: 5rem;
+  }
+}
+
+//////////////////////////////
+// dropdown left
+
+@mixin dropdown-left {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: .6rem 0;
+    background: #fff;
+
+    & li {
+      display: block;
+      position: relative;
+      background: #fff;
+
+      &:hover {
+        & ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+          position: absolute;
+        }
+
+        & li a:hover {
+          background: var(--color-grey-light-3);
+        }
+      }
+
+      & ul {
+        display: none;
+        border: 1px solid var(--color-grey-light-2);
+        padding-top: 2rem;
+
+        & li {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          flex-grow: 1;
+
+          & a {
+            color: var(--color-grey-dark-4);
+            text-decoration: none;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////
+// dropdown left
+
+@mixin dropdown-right {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: .6rem 0;
+    background: #fff;
+
+    & li {
+      display: block;
+      position: relative;
+      background: #fff;
+
+      &:hover {
+        & ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+          position: absolute;
+          right: 0;
+        }
+
+        & li a:hover {
+          background: var(--color-grey-light-3);
+        }
+      }
+
+      & ul {
+        display: none;
+        border: 1px solid var(--color-grey-light-2);
+        padding-top: 2rem;
+
+        & li {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          flex-grow: 1;
+
+          & a {
+            color: var(--color-grey-dark-4);
+            text-decoration: none;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERRY MANAGER
+/*
+0-600px phone
+600-900 tablet potrait
+900-1200 tablet landscape
+1200-1800 normal styles
+1800+ big desktop
+ */
+
+ @mixin  respond($breakpoint) {
+   @if $breakpoint == phone {
+     @media (max-width: 37.5em) { @content }; //600px
+   }
+   @if $breakpoint == tab-port {
+     @media (max-width: 56.25em) { @content };  //900px
+   }
+   @if $breakpoint == tab-land {
+     @media (max-width: 75em) { @content }; //1200px
+   }
+   @if $breakpoint == big-desktop {
+     @media (min-width: 112.5em) { @content }; //1800px
+   }
+ }
