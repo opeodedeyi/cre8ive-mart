@@ -1,7 +1,7 @@
 {
-  "name": "Trillo",
+  "name": "Cre8ive-mart",
   "version": "1.0.0",
-  "description": "Landing page for Trillos",
+  "description": "Landing page for Cre8ive-mart",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open"
