@@ -25,6 +25,14 @@
   margin-left: var(--margin-left-1);
 }
 
+// box shadow
+@mixin box-shadow {
+  box-shadow : 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin box-shadow-darker {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
 ///////////////////////////
 ///////////        section

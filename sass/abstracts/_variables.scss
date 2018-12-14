@@ -6,16 +6,20 @@
 
   --color-facebook: #4568b2;
   --color-google: #df2c27;
+  --color-link: #007791;
+  --color-link-dark: #00596D;
 
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
+  --color-grey-light-4: #CCCCCC;
+  --color-grey-light-5: #DDDDDD;
 
   --color-grey-dark-1: 51, 51, 51; //#333
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-grey-dark-4: #646464;
+  --color-grey-dark-6: #444444;
   --color-grey-dark-5: 34, 34, 34; //#222
   
   --color-white: #FFF;
@@ -30,4 +34,10 @@
 
   --margin-right-1: 3.5rem;
   --margin-left-1: 3.5rem;
+
+  --card-max-width-norm: 1175px;
+  --card-max-width-tab-land: 900px;
+  --card-max-width-tab-port: 500px;
+  --card-max-width-phone: 600px;
+
 }

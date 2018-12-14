@@ -1,51 +1,56 @@
 .footer {
+  min-height: 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
   padding: 1rem 2rem;
 
-  & a {
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--color-grey-dark-4);
+  &-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center; 
 
-    &:hover{
-      background-color: var(--color-primary-dark);
-      color: var(--color-white);
-      padding: .5rem 1rem;
-    }
-  }
+    &-company {
 
-  &-content__one{
-    font-size: 1.5rem;
-    padding: 1rem 0;
+      &-name {
+        font-size: 2.1rem;
+        font-weight: 800;
+        color: var(--color-primary-darker);
+        padding-right: 3rem;
+      }
 
-    & a {
-      @include respond(phone) {
-        text-decoration: underline;
+      &-copy {
+        font-size: 1.3rem;
+        color: var(--color-grey-dark-4);
       }
     }
   }
 
-  &-content__two {
-    font-size: 1.3rem;
+  &-right {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 
-    & p {
-      margin: 0 2rem;
-    }
-  }
-
-  &-bottom {
-
-    & p {
+    & a {
       font-size: 1.3rem;
-      padding: 1rem 0;
+      text-decoration: none;
+      color: var(--color-link);
+
+      &:hover{
+        color: var(--color-link-dark);
+      }
+    }
+
+    &-one {
+      margin-right: 3rem;
+    }
+
+    &-two {
+
     }
   }
 }
